@@ -31,8 +31,12 @@ if( obj.Linkedin != '' && obj.Linkedin != null ){
 widgetDiv += '<a class="logoLink" href="'+obj.Linkedin+'" target="_Blank"> <img src="https://cdn1.iconfinder.com/data/icons/logotypes/32/square-linkedin-512.png" class="avatar"/> </a>';
 }
 if( obj.Twitter != '' && obj.Twitter != null ){
-widgetDiv += '<a class="logoLink" href="'+obj.Twitter+'" target="_Blank"> <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" class="avatar"/> </a> </div> </div>';
+widgetDiv += '<a class="logoLink" href="'+obj.Twitter+'" target="_Blank"> <img src="https://cdn4.iconfinder.com/data/icons/social-media-icons-the-circle-set/48/twitter_circle-512.png" class="avatar"/> </a>';
 }
+
+widgetDiv += '</div> ';
+widgetDiv += '<div><a href="https://forceleaderboard-developer-edition.na50.force.com" target="_Blank" style="font-size: 10px;">Create Yours</a></div>'
+widgetDiv += '</div>';
 
 var iDiv = document.createElement('div');
 iDiv.id = 'sfWidget';
