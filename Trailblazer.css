@@ -22,6 +22,6 @@ text-transform: capitalize;
 color: green;
 font-weight: 600;
 }
-.logos a{
-text-decoration: none;
+.logoLink{
+text-decoration: none !important;
 }
