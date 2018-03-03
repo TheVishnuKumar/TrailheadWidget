@@ -1,3 +1,4 @@
+(function () {
 var xmlHttp = new XMLHttpRequest();
 xmlHttp.open( "GET", 'https://forceleaderboard-developer-edition.na50.force.com/services/apexrest/trailblazer?id=atjat3j8zoSKbMseEH', false ); // false for synchronous request
 xmlHttp.send( );
@@ -31,3 +32,4 @@ link.type = "text/css";
 link.rel = "stylesheet";
 link.href = 'https://rawgit.com/vishnuvaishnav/TrailheadWidget/master/Trailblazer.css';
 head.appendChild(link);
+})();
