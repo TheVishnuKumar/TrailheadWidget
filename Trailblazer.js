@@ -1,6 +1,8 @@
 (function () {
+var tblzrid = document.getElementById("trailblazerWidget").getAttribute("trailblazerid");
+
 var xmlHttp = new XMLHttpRequest();
-xmlHttp.open( "GET", 'https://forceleaderboard-developer-edition.na50.force.com/services/apexrest/trailblazer?id=atjat3j8zoSKbMseEH', false ); // false for synchronous request
+xmlHttp.open( "GET", 'https://forceleaderboard-developer-edition.na50.force.com/services/apexrest/trailblazer?id='+tblzrid, false ); // false for synchronous request
 xmlHttp.send( );
 var obj = JSON.parse(xmlHttp.responseText);
   
