@@ -1,26 +1,25 @@
-
-  .logos img{
-    height:32px;
-    border-radius: 15px;
-  }
-  .profilePanel{
-    width: 200px;
-    text-align: center;
-    border-radius: 16px;
-    box-shadow: 1px 3px 14px 0px #888888;
-    padding: 8px;
-    float: left;
-    height: 210px;
-    margin-left: 12px;
-  }
-  .logos a img{
-    height: 32px;
-  }
+.logos img{
+height:32px;
+border-radius: 15px;
+}
+.profilePanel{
+width: 200px;
+text-align: center;
+border-radius: 16px;
+box-shadow: 1px 3px 14px 0px #888888;
+padding: 8px;
+float: left;
+height: 210px;
+margin-left: 12px;
+}
+.logos a img{
+height: 32px;
+}
 .logos a{
 text-decoration: none !important;
 }
-  .badgeRank{
-      text-transform: capitalize;
-      color: green;
-      font-weight: 600;
-  }
+.badgeRank{
+text-transform: capitalize;
+color: green;
+font-weight: 600;
+}
