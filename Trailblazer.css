@@ -12,6 +12,11 @@ float: left;
 height: 195px;
 margin-left: 12px;
 background: white;
+color: black;
+font-family: sans-serif;
+}
+.profilePanel div table {
+    width:100%;
 }
 .logos a img{
 height: 32px;
