@@ -16,6 +16,9 @@
   .logos a img{
     height: 32px;
   }
+.logos a{
+text-decoration: none !important;
+}
   .badgeRank{
       text-transform: capitalize;
       color: green;
