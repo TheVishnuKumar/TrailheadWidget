@@ -6,8 +6,21 @@ xmlHttp.open( "GET", 'https://forceleaderboard-developer-edition.na50.force.com/
 xmlHttp.send( );
 var obj = JSON.parse(xmlHttp.responseText);
   
-var widgetDiv = '<div class="profilePanel"> <div> <img src="'+obj.Profile_Image+'" class="avatar" style="height: 50px;border-radius: 50%;"/> </div> <div> <a href="'+obj.Trailhead_URL+'" target="_Blank" style="text-transform: capitalize;">'+obj.Name+'</a> <br/> <div class="slds-truncate" title="'+obj.Title+'">'+obj.Title+'</div> <span class="badgeRank">'+obj.Rank+'</span> </div> <div style="margin-top: 5px;"> <table> <tr> <td style="text-align: center;">Badges</td> <td style="text-align: center;">Points</td><td style="text-align: center;">Certification</td></tr> <tr> <td style="text-align: center;font-size: 16px;"> <span >'+obj.Badges+'</span> </td> <td style="text-align: center;font-size: 16px;"> <span >'+obj.Points+'</span> </td> <td style="text-align: center;font-size: 16px;"> <a href="'+obj.Certification_URL+'" target="_Blank">'+obj.Certifications+'</a> </td></tr> </table> </div> <div class="logos" style="margin-top: 5px;"> <a class="logoLink" href="'+obj.Trailhead_URL+'" target="_Blank"> <img src="https://trailhead.salesforce.com/assets/trailhead-flogo-1c99be34ac805c0cb128c1bb5e0cf6570943530f86063bebb1cf576c93c30069.png" class="avatar"/> </a>';
-if( obj.Certification_URL != null && obj.Certification_URL != null ){
+var widgetDiv = '<div class="profilePanel"> <div> <img src="'+obj.Profile_Image+'" class="avatar" style="height: 50px;border-radius: 50%;"/> </div> <div> <a href="'+obj.Trailhead_URL+'" target="_Blank" style="text-transform: capitalize;">'+obj.Name+'</a> <br/> <div class="slds-truncate" title="'+obj.Title+'">'+obj.Title+'</div> <span class="badgeRank">'+obj.Rank+'</span> </div> <div style="margin-top: 5px;"> <table> <tr> <td style="text-align: center;">Badges</td> <td style="text-align: center;">Points</td>';
+
+if( obj.Certifications != '' && obj.Certifications != null && obj.Certifications != 0 ){
+  widgetDiv += '<td style="text-align: center;">Certification</td>';
+}
+
+widgetDiv += '</tr> <tr> <td style="text-align: center;font-size: 16px;"> <span >'+obj.Badges+'</span> </td> <td style="text-align: center;font-size: 16px;"> <span >'+obj.Points+'</span> </td> <td style="text-align: center;font-size: 16px;">';
+
+if( obj.Certifications != '' && obj.Certifications != null && obj.Certifications != 0 ){
+  widgetDiv += '<a href="'+obj.Certification_URL+'" target="_Blank">'+obj.Certifications+'</a>';
+}
+
+widgetDiv += '</td></tr> </table> </div> <div class="logos" style="margin-top: 5px;"> <a class="logoLink" href="'+obj.Trailhead_URL+'" target="_Blank"> <img src="https://trailhead.salesforce.com/assets/trailhead-flogo-1c99be34ac805c0cb128c1bb5e0cf6570943530f86063bebb1cf576c93c30069.png" class="avatar"/> </a>';
+
+if( obj.Certification_URL != '' && obj.Certification_URL != null ){
 widgetDiv += '<a class="logoLink" href="'+obj.Certification_URL+'" target="_Blank"> <img src="http://www.runconsultants.com/wp-content/uploads/2014/04/cert_program_rgb-e1390842424619.png" class="avatar"/> </a>'; 
 }
 if( obj.Facebook != '' && obj.Facebook != null ){
