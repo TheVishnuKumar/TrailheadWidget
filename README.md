@@ -1,4 +1,4 @@
-# TrailheadWidget
+# Force Leader Board Widget
 
 <b>How to add?</b>
 <br/>
@@ -11,7 +11,6 @@ Copy and paste this code in your website.
 <br/>
 &#60;/div>
 
-<br/>
 <br/>
 <b>Where to get Trailblazer ID:</b>
 <br/>
